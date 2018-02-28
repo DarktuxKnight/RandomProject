@@ -2,23 +2,18 @@ import string
 import random
 
 pilength = random.randint(4,10)
-#print(pilength)
+print(pilength)
 
 temp = 22/7
 temp = str(temp)
-x,y = temp.split('.')
-x = x + '.'
+x = temp.split('.')[0] + '.'
 
 numx = 22
 decstring = ''
+tempmod = numx%7
 for i in range(0,pilength):
-    tempmod = numx%7
     tempmod = int(str(tempmod) + str('0'))
-    print(tempmod)
+    decstring = str(decstring) + str(tempmod/7).split('.')[0]
+    tempmod = int(str(tempmod%7))
 
-    dec,other = str(tempmod/7).split('.')
-    decstring = str(decstring) + str(dec)
-
-    numx = int(str(tempmod%7) + str('0'))
-
-print(str(x) + str(decstring))
+print(float(str(x)+str(decstring)))
