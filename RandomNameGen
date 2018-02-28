@@ -1,0 +1,36 @@
+import string
+import random
+import psycopg2
+from config import config
+
+def insert_names(firstname,lastname):
+    sql = """INSERT INTO names VALUES(%s,%s);"""
+
+    conn=None
+    params = config()
+    conn = psycopg2.connect(**params)
+    cur = conn.cursor()
+    cur.execute(sql,(firstname,lastname))
+    conn.commit()
+    cur.close()
+    conn.close()
+
+def generator(firstnamelen,lastnamelen):
+
+    firstname = lastname = ''
+    for i in range(0,firstnamelen):
+        firstname = firstname + random.choice(string.ascii_lowercase)
+    for i in range(0,lastnamelen):
+        lastname = lastname + random.choice(string.ascii_lowercase)
+
+    return(firstname,lastname)
+
+while True:
+    firstnamelen = random.randint(4,14)
+    lastnamelen = random.randint(4,14)
+    firstname,lastname = generator(firstnamelen,lastnamelen)
+
+    firstname = firstname.title()
+    lastname = lastname.title()
+
+    insert_names(firstname,lastname)

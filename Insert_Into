@@ -1,0 +1,16 @@
+import psycopg2
+from config import config
+
+def insert_names(firstname,lastname):
+    sql = """INSERT INTO names VALUES(%s);"""
+
+    conn=None
+    params = config()
+    conn = psycopg2.connect(**params)
+    cur = conn.cursor()
+    cur.execute(sql,(firstname,lastname))
+    conn.commit()
+    cur.close()
+    conn.close()
+
+insert_names(V,K)
