@@ -1,20 +1,21 @@
-import  random
+import random
 
-num = random.randint(10,20)
+num = random.randint(100,200)
 print(num,'\n')
 
-irange = []
-isum = 0
-i=0
-x=True
-while x:
-    i = i+1
-    isum = isum + 2**i
-    if isum >= num:
-        x=False
-        break
-    irange = irange + [i]
+bitarray = []
 
-print(isum)
-print('\n')
-print(irange)
+while True:
+    tempq = num//2
+    tempr = num%2
+
+    if tempr == 0:
+        bitarray = bitarray + [0]
+    if tempr == 1:
+        bitarray = bitarray + [1]
+
+    num = tempq
+    if num == 0:
+        break
+
+print(list(reversed(bitarray)))
