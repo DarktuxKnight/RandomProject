@@ -46,4 +46,5 @@ b = int(input("Enter 2nd digit: "))
 
 inputarray = [a,b,operation]
 #print(inputarray)
+#print("{} {} {}".format(a,operation,b))
 calcs(inputarray)
