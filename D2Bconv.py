@@ -17,5 +17,5 @@ while True:
     num = tempq
     if num == 0:
         break
-
-print(list(reversed(bitarray)))
+list(reversed(bitarray))
+print(bitarray)
