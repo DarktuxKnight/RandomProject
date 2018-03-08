@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Algorithms/.idea/Algorithms.iml" filepath="$PROJECT_DIR$/../Algorithms/.idea/Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DataStructures/.idea/DataStructures.iml" filepath="$PROJECT_DIR$/../DataStructures/.idea/DataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RandomProject.iml" filepath="$PROJECT_DIR$/.idea/RandomProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../StringManipulation/.idea/StringManipulation.iml" filepath="$PROJECT_DIR$/../StringManipulation/.idea/StringManipulation.iml" />
     </modules>
   </component>
 </project>

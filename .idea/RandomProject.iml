@@ -9,5 +9,7 @@
     <orderEntry type="library" name="R Skeletons" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="module" module-name="DataStructures" />
+    <orderEntry type="module" module-name="Algorithms" />
+    <orderEntry type="module" module-name="StringManipulation" />
   </component>
 </module>
